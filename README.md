@@ -1,3 +1,16 @@
+
+Student: Michael Noyes<br>
+Class: Full Stack Web Development<br>
+Assignment 1<br>
+
+## Sample Code
+~~~
+function displayMessage()
+{
+    alert('Michael says "hello world"');
+}
+~~~
+
 # :wave: The Basics of GitHub 
 
 ## 🤓 Course overview and learning outcomes 
