@@ -108,3 +108,11 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
+.extended {
+    background-color: rgb(30, 255, 68);
+    font-weight: bold;
+}
+
+.extended:focus {
+    background-color: #ffc183;
+}
