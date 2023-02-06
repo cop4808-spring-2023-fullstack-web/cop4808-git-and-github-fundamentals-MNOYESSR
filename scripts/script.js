@@ -7,7 +7,7 @@ let result = null;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
-    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+    const key = document.querySelector(`button[data-key='${e.key}']`);
     key.click();
 });
 
@@ -38,12 +38,18 @@ function clickButton() {
             } else if(buttons[i].classList.contains('percent')) {
                 inputPercent(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sign')) {
+            }
+            else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            }
+            else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
+            }
+            else if(buttons[i].classList.contains('extended')){
+                inputOperator(buttons[i].value);             
+            }
         }
     )}
 }
@@ -176,7 +182,18 @@ function operate(x, y, op) {
         } else {
         return x / y;
         }
+    } else if(op === '@') {
+        return x % y;
+    } else if(op === '^') {
+        return Math.pow(x,y);
     }
+    else if(op === '!') {
+        return Math.log10(x);
+    }
+    else if(op === '~') {
+        return Math.log2(x);;
+    }
+
 }
 
 function roundAccurately(num, places) {
