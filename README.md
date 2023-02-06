@@ -6,5 +6,6 @@ Assignment 2<br>
 ## Changes
 ~~~
 added 4 buttons to calculator
+mod, power, log10, log2
 ~~~
 
